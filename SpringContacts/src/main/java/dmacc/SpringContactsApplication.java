@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 import dmacc.beans.Contact;
 import dmacc.controller.BeanConfiguration;
 
@@ -11,8 +12,12 @@ import dmacc.controller.BeanConfiguration;
 public class SpringContactsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringContactsApplication.class, args);
+		
 		ApplicationContext appContext = new AnnotationConfigApplicationContext(BeanConfiguration.class);
 		Contact c = appContext.getBean("contact", Contact.class);
+		
 		System.out.println(c.toString());
+		
+		//Stopped at the bottom of page 6 - Dependency Injection
 	}
 }

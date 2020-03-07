@@ -16,6 +16,8 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<!-- Had to add <start-class> property manually as the New Spring Boot project wizard didn't -->
+		<start-class>dmacc.SpringContactsApplication</start-class>
 	</properties>
 
 	<dependencies>
