@@ -1,5 +1,6 @@
 package dmacc.beans;
 
+
 public class Contact {
 	private long id;
 	private String name;

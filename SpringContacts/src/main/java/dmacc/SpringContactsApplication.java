@@ -17,7 +17,8 @@ public class SpringContactsApplication {
 		Contact c = appContext.getBean("contact", Contact.class);
 		
 		System.out.println(c.toString());
-		
+		//
 		//Stopped at the bottom of page 6 - Dependency Injection
+		//
 	}
 }
