@@ -1,15 +1,24 @@
 package dmacc.beans;
 
+import javax.persistence.Entity;
+import javax.persistence.*;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+@Entity
 public class Contact {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private String name;
 	private String phone;
 	private String relationship;
+	@Autowired
+	private Address address;
 	
 	public Contact() {
 		super();
-		// TODO Auto-generated constructor stub
+		this.relationship = "spouse";  //set default value
 	}
 	
 	public Contact(String name) {
@@ -31,6 +40,7 @@ public class Contact {
 		this.phone = phone;
 		this.relationship = relationship;
 	}
+	
 	
 
 	public long getId() {
@@ -65,9 +75,20 @@ public class Contact {
 		this.relationship = relationship;
 	}
 
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
 	@Override
 	public String toString() {
-		return "Contact [id=" + id + ", name=" + name + ", phone=" + phone + ", relationship=" + relationship + "]";
+		return "Contact [id=" + id + ", name=" + name + ", phone=" + phone + ", relationship=" + relationship
+				+ ", address=" + address + "]";
 	}
+	
+
 
 }
