@@ -1,2 +1,2 @@
-### CIS175 Wk8 lab
-Spring Application Framework-working with beans
+### CIS175 Wk9 Spring Contacts 2
+Spring MVC with Persistence
