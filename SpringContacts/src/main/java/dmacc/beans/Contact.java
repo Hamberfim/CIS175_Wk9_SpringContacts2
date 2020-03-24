@@ -18,7 +18,7 @@ public class Contact {
 	
 	public Contact() {
 		super();
-		this.relationship = "spouse";  //set default value
+		this.relationship = "unknown";  //set default value
 	}
 	
 	public Contact(String name) {

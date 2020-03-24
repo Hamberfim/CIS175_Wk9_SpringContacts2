@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert New Contact - Spring Contacts 2</title>
+</head>
+<body>
+	<form th:object="${newContact}" th:action="@{/update/{id}(id=${newContact.id})}" method='POST' action="">
+		Name: <input name="name" size="20" th:field="*{name}"> <br /><br />  
+		Relationship: <input name="relationship" size="10" th:field="*{relationship}"><br /><br />  
+		Phone Number: <input name="phone" size="20" th:field="*{phone}"><br /><br />  
+		Street: <input name="address.street" size="20" th:field="*{address.street}"><br /><br />  
+		City: <input name="address.city" size="20" th:field="*{address.city}"><br /><br />  
+		State:<input name="address.state" size="20" th:field="*{address.state}"><br /><br />  
+		<input name="submit" type="submit" value="submit" />
+	</form>
+	<a href="viewAll">View all Contacts</a>
+</body>
+</html>

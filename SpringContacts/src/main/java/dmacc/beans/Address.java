@@ -12,7 +12,7 @@ public class Address {
 	
 	public Address() {
 		super();
-		// TODO Auto-generated constructor stub
+
 	}
 
 	public Address(String street, String city, String state) {
